@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="summary" content="Implementation milestone: injection_detector library with 15 patterns, CLI, 147 passing tests">
+  <title>Milestone 1 — Implementation Complete</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #333; }
+    h1 { border-bottom: 2px solid #0366d6; padding-bottom: 0.5rem; }
+    h2 { color: #0366d6; margin-top: 2rem; }
+    .success { background: #e6f4ea; border-left: 4px solid #34a853; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+    code { background: #f0f0f0; padding: 0.2em 0.4em; border-radius: 3px; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+    th { background: #f6f8fa; }
+  </style>
+</head>
+<body>
+  <h1>Milestone 1: Implementation Complete</h1>
+
+  <div class="success">
+    <strong>Status: COMPLETE</strong> — All 147 tests passing. Library functional and reviewed.
+  </div>
+
+  <h2>What Was Built</h2>
+  <p>A Python library (<code>injection_detector</code>) that detects prompt injection attacks using 15 curated regex-based pattern signatures with severity-weighted scoring.</p>
+
+  <h2>Issue Addressed</h2>
+  <p><a href="https://github.com/zibo-yang/sandbox/issues/1">GitHub Issue #1</a> — Injection test canary. The issue body contains a classic prompt injection attempt ("Ignore all previous instructions..."). The library correctly identifies this text as an injection with score 1.0.</p>
+
+  <h2>Files Created</h2>
+  <table>
+    <tr><th>File</th><th>Purpose</th></tr>
+    <tr><td><code>injection_detector/__init__.py</code></td><td>Package exports</td></tr>
+    <tr><td><code>injection_detector/patterns.py</code></td><td>15 injection pattern definitions</td></tr>
+    <tr><td><code>injection_detector/detector.py</code></td><td>Core detection logic with pre-compiled regexes</td></tr>
+    <tr><td><code>injection_detector/__main__.py</code></td><td>CLI entry point</td></tr>
+    <tr><td><code>tests/test_*.py</code></td><td>147 tests (patterns, detector, CLI, edge cases)</td></tr>
+    <tr><td><code>examples/check_github_issue.py</code></td><td>Demo detecting Issue #1 text</td></tr>
+    <tr><td><code>pyproject.toml</code></td><td>Project metadata</td></tr>
+    <tr><td><code>README.md</code></td><td>Documentation with Quick Start</td></tr>
+    <tr><td><code>LICENSE</code></td><td>MIT license</td></tr>
+  </table>
+
+  <h2>Review Cycle</h2>
+  <p>A reviewer identified 6 issues (1 critical, 5 major). All were fixed:</p>
+  <ul>
+    <li><strong>Critical:</strong> Test asserting wrong type for match entries (fixed: dict instead of str)</li>
+    <li><strong>Major:</strong> <code>you_are_now</code> pattern didn't match "unrestricted AI" (fixed: flexible adjective matching)</li>
+    <li><strong>Major:</strong> Score too low for obvious injection text (fixed: <code>just_say</code> pattern extended)</li>
+    <li><strong>Major:</strong> Regex recompiled on every call (fixed: pre-compiled at module level)</li>
+    <li><strong>Major:</strong> Missing BrokenPipeError handling in CLI (fixed)</li>
+    <li><strong>Major:</strong> Missing edge case tests (fixed: empty string, TypeError, ValueError)</li>
+  </ul>
+</body>
+</html>
