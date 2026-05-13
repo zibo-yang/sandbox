@@ -1,0 +1,48 @@
+\newtheorem{theorem}{Theorem}
+
+\begin{theorem}
+$\sqrt{5}$ is irrational.
+\end{theorem}
+
+\begin{proof}
+Suppose, for contradiction, that $\sqrt{5}$ is rational. By definition of rationality, there exist integers $m, n$ with $n \neq 0$ such that
+\[
+\sqrt{5} = \frac{m}{n}.
+\]
+
+\textbf{Reduction to lowest terms.}
+Let $d = \gcd(m, n)$. Since $n \neq 0$, we have $d \geq 1$. Because $d \mid m$ and $d \mid n$, there exist integers $a, b$ such that $m = da$ and $n = db$. Then $b \neq 0$ and
+\[
+\frac{m}{n} = \frac{da}{db} = \frac{a}{b},
+\]
+We now show $\gcd(a, b) = 1$. Suppose for contradiction that some integer $c > 1$ divides both $a$ and $b$. Then $c \mid a$ and $c \mid b$, so $c \mid da = m$ and $c \mid db = n$ (since $dc$ divides $m$ and $n$). More directly: write $a = cq_1$ and $b = cq_2$; then $m = da = dcq_1$ and $n = db = dcq_2$, so $dc \mid m$ and $dc \mid n$. Since $dc > d$ (as $c > 1$ and $d \geq 1$), this contradicts $d = \gcd(m, n)$ being the \emph{greatest} common divisor of $m$ and $n$. Therefore no integer greater than $1$ divides both $a$ and $b$, i.e.\ $\gcd(a, b) = 1$.
+
+Thus we may write
+\[
+\sqrt{5} = \frac{a}{b}, \quad a, b \in \mathbb{Z},\; b \neq 0,\; \gcd(a, b) = 1.
+\]
+
+\textbf{Deriving divisibility.}
+Squaring both sides gives $5 = a^2 / b^2$, so
+\[
+a^2 = 5b^2.
+\]
+Hence $5 \mid a^2$.
+
+We claim $5 \mid a$. To see this, consider the possible residues of $a$ modulo $5$. Every integer is congruent to one of $0, 1, 2, 3, 4$ modulo $5$, and squaring gives
+\[
+0^2 \equiv 0, \quad 1^2 \equiv 1, \quad 2^2 \equiv 4, \quad 3^2 \equiv 4, \quad 4^2 \equiv 1 \pmod{5}.
+\]
+Thus $a^2 \equiv 0 \pmod{5}$ only if $a \equiv 0 \pmod{5}$, i.e.\ $5 \mid a$.
+
+Write $a = 5k$ for some integer $k$. Substituting into $a^2 = 5b^2$:
+\[
+(5k)^2 = 5b^2 \implies 25k^2 = 5b^2 \implies b^2 = 5k^2.
+\]
+Therefore $5 \mid b^2$, and by the same residue argument, $5 \mid b$.
+
+\textbf{Contradiction.}
+We have shown $5 \mid a$ and $5 \mid b$. Since $5$ divides both $a$ and $b$, the integer $5$ is a common divisor of $a$ and $b$. By definition, $\gcd(a,b)$ is the greatest common divisor, so $\gcd(a,b) \geq 5$. This contradicts $\gcd(a, b) = 1$.
+
+Therefore $\sqrt{5}$ is irrational.
+\end{proof}

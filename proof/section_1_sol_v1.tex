@@ -1,0 +1,39 @@
+\begin{theorem}
+The number $\sqrt{5}$ is irrational.
+\end{theorem}
+
+\begin{proof}
+Suppose, for the sake of contradiction, that $\sqrt{5}$ is rational. Then there exist integers $a$ and $b$ such that $b \neq 0$, $\gcd(a,b)=1$, and
+\[
+\sqrt{5}=\frac{a}{b}.
+\]
+Since $b \neq 0$, we may square both sides to obtain
+\[
+5=\frac{a^2}{b^2}.
+\]
+Multiplying both sides by $b^2$ gives
+\[
+a^2=5b^2.
+\]
+Thus $5 \mid a^2$.
+
+We claim that $5 \mid a$. Indeed, because $5$ is prime, Euclid's lemma implies that if $5 \mid a^2=a\cdot a$, then $5 \mid a$. Hence there exists an integer $k$ such that
+\[
+a=5k.
+\]
+Substituting this into $a^2=5b^2$ gives
+\[
+(5k)^2=5b^2,
+\]
+so
+\[
+25k^2=5b^2.
+\]
+Dividing both sides by $5$ yields
+\[
+5k^2=b^2.
+\]
+Therefore $5 \mid b^2$. Again, since $5$ is prime, Euclid's lemma implies that $5 \mid b$.
+
+Thus $5 \mid a$ and $5 \mid b$, contradicting the assumption that $\gcd(a,b)=1$. Therefore our supposition was false, and $\sqrt{5}$ is irrational.
+\end{proof}

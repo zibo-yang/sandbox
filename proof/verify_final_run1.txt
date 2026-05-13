@@ -1,0 +1,7 @@
+**Anchor:** Theorem 1  
+**Location:** “Then \(b \neq 0\) and  
+\[
+\frac{m}{n}=\frac{da}{db}=\frac{a}{b},
+\]
+with \(\gcd(a,b)=1\).”  
+**Description:** Justification Gap. The claim \(\gcd(a,b)=1\) after writing \(m=da\), \(n=db\), where \(d=\gcd(m,n)\), relies on the unstated theorem that dividing two integers by their greatest common divisor produces coprime quotients. The solution does not state or prove this property.

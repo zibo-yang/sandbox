@@ -1,0 +1,7 @@
+Anchor: Theorem 1  
+Location: “with \(\gcd(a, b) = 1\). Thus we may write \[\sqrt{5} = \frac{a}{b}, \quad a, b \in \mathbb{Z},\; b \neq 0,\; \gcd(a, b) = 1.\]”  
+Description: Justification Gap: The proof does not justify the nontrivial fact that dividing \(m,n\) by \(d=\gcd(m,n)\) produces integers \(a,b\) with \(\gcd(a,b)=1\). This relies on an unstated property of the gcd.
+
+Anchor: Theorem 1  
+Location: “We have shown \(5 \mid a\) and \(5 \mid b\). But then \(\gcd(a, b) \geq 5\), contradicting \(\gcd(a, b) = 1\).”  
+Description: Justification Gap: The conclusion \(\gcd(a,b)\geq 5\) from \(5\mid a\) and \(5\mid b\) relies on an unstated property of the gcd: that any common divisor is at most the greatest common divisor. The proof does not explicitly state or justify this property.

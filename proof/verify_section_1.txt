@@ -1,0 +1,3 @@
+Anchor: Theorem 1  
+Location: “Suppose, for the sake of contradiction, that $\sqrt{5}$ is rational. Then there exist integers $a$ and $b$ such that $b \neq 0$, $\gcd(a,b)=1$, and \[\sqrt{5}=\frac{a}{b}.\]”  
+Description: Justification Gap. Rationality directly gives a quotient representation with integers and nonzero denominator, but the solution does not explicitly justify the additional claim that the representation can be chosen with $\gcd(a,b)=1$. This relies on the unstated theorem/property that every rational number can be written in lowest terms.

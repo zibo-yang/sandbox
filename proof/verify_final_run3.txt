@@ -1,0 +1,11 @@
+Anchor: Theorem 1  
+Location: “Then \(b \neq 0\) and
+\[
+\frac{m}{n} = \frac{da}{db} = \frac{a}{b},
+\]
+with \(\gcd(a, b) = 1\).”  
+Description: Justification Gap. The proof asserts \(\gcd(a,b)=1\) after dividing \(m,n\) by \(d=\gcd(m,n)\), but it does not justify this property. It relies on the unstated theorem that dividing two integers by their greatest common divisor yields a coprime pair.
+
+Anchor: Theorem 1  
+Location: “We have shown \(5 \mid a\) and \(5 \mid b\). But then \(\gcd(a, b) \geq 5\), contradicting \(\gcd(a, b) = 1\).”  
+Description: Justification Gap. The conclusion \(\gcd(a,b)\ge 5\) from \(5\mid a\) and \(5\mid b\) is not explicitly justified. The proof relies on the definition/property that any positive common divisor of \(a\) and \(b\) is at most their greatest common divisor.

@@ -1,0 +1,130 @@
+\[
+\textbf{Theorem.}\quad \sqrt{5}\text{ is irrational.}
+\]
+
+\[
+\textbf{Proof.}
+\]
+Suppose, for contradiction, that \(\sqrt{5}\) is rational. By definition of rationality, there exist integers \(m,n\) with \(n\neq 0\) such that
+
+\[
+\sqrt{5}=\frac{m}{n}.
+\]
+
+We now justify that we may choose such a representation in lowest terms. Let
+
+\[
+d=\gcd(m,n).
+\]
+
+Since \(n\neq 0\), \(d\ge 1\). Because \(d\mid m\) and \(d\mid n\), there exist integers \(a,b\) such that
+
+\[
+m=da,\qquad n=db.
+\]
+
+Then \(b\neq 0\), and
+
+\[
+\frac{m}{n}=\frac{da}{db}=\frac{a}{b}.
+\]
+
+Moreover, by dividing \(m\) and \(n\) by their greatest common divisor, we obtain
+
+\[
+\gcd(a,b)=1.
+\]
+
+Thus we may write
+
+\[
+\sqrt{5}=\frac{a}{b},
+\]
+
+where \(a,b\in \mathbb{Z}\), \(b\neq 0\), and \(\gcd(a,b)=1\).
+
+Squaring both sides gives
+
+\[
+5=\frac{a^2}{b^2}.
+\]
+
+Multiplying by \(b^2\), which is nonzero, gives
+
+\[
+a^2=5b^2.
+\]
+
+Hence
+
+\[
+5\mid a^2.
+\]
+
+We claim that \(5\mid a\). To see this without appealing to any unstated theorem, consider the possible remainders of \(a\) modulo \(5\). Every integer is congruent modulo \(5\) to one of
+
+\[
+0,1,2,3,4.
+\]
+
+Squaring these residues gives
+
+\[
+0^2\equiv 0,\quad 1^2\equiv 1,\quad 2^2\equiv 4,\quad 3^2\equiv 9\equiv 4,\quad 4^2\equiv 16\equiv 1 \pmod 5.
+\]
+
+Thus the only way \(a^2\equiv 0\pmod 5\) is if
+
+\[
+a\equiv 0\pmod 5.
+\]
+
+Therefore \(5\mid a\). Hence there exists an integer \(k\) such that
+
+\[
+a=5k.
+\]
+
+Substituting this into \(a^2=5b^2\), we get
+
+\[
+(5k)^2=5b^2.
+\]
+
+So
+
+\[
+25k^2=5b^2.
+\]
+
+Dividing both sides by \(5\) gives
+
+\[
+5k^2=b^2.
+\]
+
+Therefore
+
+\[
+5\mid b^2.
+\]
+
+Using the same residue argument as above, \(5\mid b^2\) implies \(5\mid b\).
+
+Thus \(5\mid a\) and \(5\mid b\). This contradicts the assumption that
+
+\[
+\gcd(a,b)=1,
+\]
+
+because if both \(a\) and \(b\) are divisible by \(5\), then their greatest common divisor is at least \(5\).
+
+Therefore our supposition that \(\sqrt{5}\) is rational must be false. Hence
+
+\[
+\sqrt{5}\text{ is irrational.}
+\]
+
+\[
+\boxed{\sqrt{5}\notin \mathbb{Q}}
+\]
