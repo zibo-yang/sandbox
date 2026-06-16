@@ -1,8 +1,30 @@
 % Blueprint: calculas
 % Created by Numina
 
-\begin{document}
+\section{Irrationality of \texorpdfstring{$\sqrt{11}$}{sqrt(11)}}
 
-% Your blueprint will go here.
+\begin{lemma}[$11$ is prime]
+    \label{lem:eleven-prime}
+    \lean{Sandbox.eleven_prime}
+    \leanfile{Sandbox/Calculas.lean}
+    \leanok
+    The natural number $11$ is prime.
+\end{lemma}
+\begin{proof}
+    Immediate by direct computation: $11$ has no nontrivial divisors.
+\end{proof}
 
-\end{document}
+\begin{theorem}[Irrationality of $\sqrt{11}$]
+    \label{thm:irrational-sqrt-eleven}
+    \lean{Sandbox.irrational_sqrt_eleven}
+    \leanfile{Sandbox/Calculas.lean}
+    \uses{lem:eleven-prime}
+    \leanok
+    The real number $\sqrt{11}$ is irrational.
+\end{theorem}
+\begin{proof}
+    \uses{lem:eleven-prime}
+    Since $11$ is prime (Lemma~\ref{lem:eleven-prime}), the square root of any prime
+    natural number is irrational. Applying this fact to $11$ shows that $\sqrt{11}$ is
+    irrational.
+\end{proof}
